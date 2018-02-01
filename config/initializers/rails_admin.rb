@@ -38,4 +38,21 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+
+  config.model 'Application' do
+    list do
+      field :name
+      field :key
+    end
+
+    show do
+      field :name
+      field :key
+    end
+
+    edit do
+      field :name
+      field :password
+    end
+  end
 end

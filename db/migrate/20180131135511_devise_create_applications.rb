@@ -6,6 +6,7 @@ class DeviseCreateApplications < ActiveRecord::Migration[5.0]
       ## Database authenticatable
       t.string :name,               null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
+      t.string :key,                null: false, default: ""
 
       ## Recoverable
       t.string   :reset_password_token
@@ -36,7 +37,7 @@ class DeviseCreateApplications < ActiveRecord::Migration[5.0]
       t.timestamps null: false
     end
 
-    add_index :applications, :email,                unique: true
+    add_index :applications, :name,                unique: true
     add_index :applications, :reset_password_token, unique: true
     # add_index :applications, :confirmation_token,   unique: true
     # add_index :applications, :unlock_token,         unique: true
