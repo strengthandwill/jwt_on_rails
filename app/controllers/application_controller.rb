@@ -7,8 +7,8 @@ class ApplicationController < ActionController::Base
       render json: { errors: ['Not Authenticated'] }, status: :unauthorized
       return
     end
-    @current_application = Application.find(auth_token[:application_id])
-    unless @current_application.key == @http_token
+    @current_application = Application.find_by(id: auth_token[:application_id], key_created_at: auth_token[:key_created_at])
+    unless @current_application
       render json: { errors: ['Not Authenticated'] }, status: :unauthorized
       return
     end

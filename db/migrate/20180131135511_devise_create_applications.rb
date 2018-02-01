@@ -33,7 +33,7 @@ class DeviseCreateApplications < ActiveRecord::Migration[5.0]
       # t.datetime :locked_at
 
       ## Info
-      t.string :key,        null: false, default: ""
+      t.string :key_created_at, null: false, default: ""
       t.string :description
 
       t.timestamps null: false

@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20180131135511) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.string   "key",                    default: "", null: false
+    t.string   "key_created_at",         default: "", null: false
     t.string   "description"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
