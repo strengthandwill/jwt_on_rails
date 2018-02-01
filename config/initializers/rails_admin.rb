@@ -42,16 +42,19 @@ RailsAdmin.config do |config|
   config.model 'Application' do
     list do
       field :name
+      field :description
       field :key
     end
 
     show do
       field :name
+      field :description
       field :key
     end
 
     edit do
       field :name
+      field :description
       field :password
     end
   end
